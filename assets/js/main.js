@@ -12,13 +12,36 @@
 
 // Chiediamo e l'utente inserisce la parola
 var string = prompt('Inserisci una parola');
-
+console.log(string);
 // Creiamo la funzione per capire se la parola è palindroma
 
-function checkPalindroma () {
+
+function check(string) {
   //.split separa la parola e inserisce ogni lettera in un cassetto dell'array
+  var splitStringa = string.split("");
   //.reverse inverte l'ordinamento dell'array
+  var reverseArray = splitStringa.reverse();
   //.join riunisce tutti gli elementi dell'array in una stringa
-  return () == ().split('').reverse().join('');
+  var unioneArray = reverseArray.join("");
+
+  console.log(splitStringa);
+  console.log(reverseArray);
+  console.log(unioneArray);
+
+
 }
-console.log();
+
+var varCheck = check();
+
+console.log(varCheck);
+
+
+
+
+// function checkPalindroma () {
+//
+//   var checkString = string.split('').reverse().join('');
+//   console.log(checkString);
+//
+// }
+//   return (checkString) == string.split('').reverse().join('');
