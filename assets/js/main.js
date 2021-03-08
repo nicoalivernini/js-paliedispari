@@ -1,3 +1,4 @@
+/*
 // Palidroma
 
 // Chiediamo e l'utente inserisce la parola
@@ -26,6 +27,8 @@ check(string)
  } else {
    console.log('Questa parola non è palindroma');
  }
+*/
+
 
 
 // Pari o Dispari
@@ -37,12 +40,33 @@ var numero = parseInt(prompt("scegli un numero da 1 a 5"));
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 function randomNumber(min, max) {
+  var numero = Math.floor(Math.random() * (max) + min);
+  return numero;
+}
+//Richiamo la funzione, salvo il valore in una variabile e stampo il numero casuale dato
+var numeroRandom = randomNumber(1, 5)
+console.log(numeroRandom);
 
-  var numeroRandom = Math.floor(Math.random() * (max) + 1);
+// Sommiamo i due numeri
+var somma = numero + numeroRandom;
+console.log(somma);
+
+// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+function checkNumber(num1) {
+  if (somma%2==0) {
+    console.log('Questo numero è pari');
+  } else {
+    console.log('Questo numero è dispari');
+  }
 }
 
-randomNumber(1, 5);
-console.log(randomNumber);
+checkNumber(somma);
 
-// Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
+if (pariDispari == "pari") {
+  if (somma%2==0) {
+    console.log("Ha vinto l'umano");
+  } else {
+    console.log("Ha vinto il computer");
+  }
+}
